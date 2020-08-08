@@ -1,1 +1,1 @@
-## MERN blog
+## MERN blog backend
