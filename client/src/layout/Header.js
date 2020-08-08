@@ -46,7 +46,7 @@ const Header = ({ isAuthenticated, gender, slug }) => {
               src={zombieHead}
               marginLeft='5px'
               marginRight='30px'
-              style={{ height: 40,width: '200px',height: '30px', verticalAlign: 'bottom' }}
+              style={{width: '200px',height: '30px', verticalAlign: 'bottom' }}
             />
           </Typography>
           <Tabs
