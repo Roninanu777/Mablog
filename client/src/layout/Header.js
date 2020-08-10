@@ -12,7 +12,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 
-import zombieHead from '../assets/logo.png';
+import logo from '../assets/logo.png';
 import woman from '../assets/woman.svg';
 import man from '../assets/man.svg';
 
@@ -43,7 +43,7 @@ const Header = ({ isAuthenticated, gender, slug }) => {
           >
             <Box
               component='img'
-              src={zombieHead}
+              src={logo}
               marginLeft='5px'
               marginRight='30px'
               style={{width: '200px',height: '30px', verticalAlign: 'bottom' }}

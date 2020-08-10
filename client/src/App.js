@@ -16,6 +16,7 @@ import Search from './pages/Search';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import User from './pages/User';
+import Footer from './layout/Footer';
 
 const App = ({ isAuthenticated }) => {
   const { pathname } = useLocation();
@@ -36,7 +37,6 @@ const App = ({ isAuthenticated }) => {
         <Redirect from='/auth' exact to='/auth/sign-up' />
         <Route path='*' component={NotFound} />
       </Switch>
-
       {/* Hide if not Authenticated or in add || edit page */}
       {isAuthenticated && !pathname.match(/blogs\/(add|edit)/) && (
         <Tooltip title='Add Blog' aria-label='add blog' arrow>
@@ -46,6 +46,7 @@ const App = ({ isAuthenticated }) => {
             style={{ position: 'fixed', right: 40, bottom: 40, zIndex: 9999 }}
             component={Link}
             to='/blogs/add'
+            size='large'
           >
             <AddIcon />
           </Fab>
