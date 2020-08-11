@@ -25,7 +25,7 @@ const getUserBySlug = async (req, res) => {
   const user = await User.findOne({ slug: req.params.slug });
   if (!user) throw new CustomError(404, 'User Not Found');
 
-  const followers = await User.find({ follows: user._id }).count();
+  const followers = await User.find({ follows: user._id }).countDocuments();
   res.json({ user, followers });
 };
 
@@ -41,7 +41,7 @@ const getUserBlogsBySlug = async (req, res) => {
     },
   });
   if (!user) throw new CustomError(404, 'User Not Found');
-  const count = await Blog.count({ author: user._id });
+  const count = await Blog.countDocuments({ author: user._id });
   const pages = Math.ceil(count / pagesize);
   res.json({ pages, blogs: user.blogs });
 };
@@ -74,7 +74,7 @@ const getFollowedUsersBlogs = async (req, res) => {
     .skip((page - 1) * pagesize)
     .limit(pagesize);
 
-  const countPromise = Blog.count({ author: req.user.follows });
+  const countPromise = Blog.countDocuments({ author: req.user.follows });
   const [count, blogs] = await Promise.all([countPromise, blogsPromise]);
   const pages = Math.ceil(count / pagesize);
 
