@@ -37,6 +37,7 @@ const App = ({ isAuthenticated }) => {
         <Redirect from='/auth' exact to='/auth/sign-up' />
         <Route path='*' component={NotFound} />
       </Switch>
+      <Footer />
       {/* Hide if not Authenticated or in add || edit page */}
       {isAuthenticated && !pathname.match(/blogs\/(add|edit)/) && (
         <Tooltip title='Add Blog' aria-label='add blog' arrow>
