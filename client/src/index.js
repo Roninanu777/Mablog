@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { lightBlue } from '@material-ui/core/colors';
+import {indigo} from '@material-ui/core/colors';
 import { BrowserRouter } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
 import { Provider } from 'react-redux';
@@ -15,15 +15,18 @@ import ScrollToTop from './helper_components/ScrollToTop';
 import StatusHandler from './helper_components/StatusHandler';
 import store from './redux/store';
 
+
 const theme = createMuiTheme({
   palette: {
     type: 'light',
-    primary: lightBlue,
-    secondary: '',
+    primary: indigo,
     background: {
       default: '#f7f7f7',
     },
   },
+  shape: {
+    borderRadius: 8
+  }
 });
 
 ReactDOM.render(
