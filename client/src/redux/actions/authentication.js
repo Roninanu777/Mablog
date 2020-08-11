@@ -20,6 +20,12 @@ const logIn = ({ email = '', password = '' } = {}) => {
   });
 };
 
+const logout = () => dispatch => {
+  localStorage.removeItem("jwtToken");
+  
+  dispatch(setAuthDetails({}));
+}
+
 const signUp = (date = {}) => {
   return catchErrors(async (dispatch) => {
     const { token, user } = await axios.post(`${BACKEND_BASE_URL}/users`, date);
@@ -39,4 +45,4 @@ const followUser = (id) => {
   });
 };
 
-export { logIn, signUp, followUser };
+export { logIn, logout, signUp, followUser };
