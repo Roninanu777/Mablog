@@ -61,7 +61,7 @@ const Header = ({ isAuthenticated, gender, slug }) => {
             <Tab label='All blogs' component={Link} to='/' />
             {isAuthenticated && (
               <Tab
-                label='What followers say!'
+                label='What others say!'
                 component={Link}
                 to='/followed'
               />
