@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography'
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import icon from './icon-circle.png';
-import arrowblue from './arrowblue.svg';
 import arrowwhite from './arrowwhite.svg';
 import instagram from './instagram.svg';
 import facebook from './facebook.svg';
@@ -47,7 +45,7 @@ const FooterContent = styled.div`
     margin: 1rem 0 0 0;
     display: flex;
     justify-content: space-between;
-    align-items: top;
+    align-items: center;
 `;
 
 const RightFooterContent = styled.section`
@@ -72,17 +70,17 @@ class Footer extends Component {
                 <FooterContent>
                     <LeftFooterContent>
                         <img src={icon} style={{marginBottom: '2rem'}} alt='company-icon' />
-                        <Typography><Link href="#" color='inherit'>See all services</Link></Typography>
+                        <Typography><Link href="#" color='secondary'>See all services</Link></Typography>
                         <p style={{fontSize: '1.4rem'}}>Learn new. Everyday.</p>
                         <Subscribe>
                             <input style={{paddingLeft: '.5rem',paddingRight: '3rem', outline: 'none'}} type="email" placeholder="Email address" />
                             <Button type="submit"><img src={arrowwhite} alt="arrow" /></Button>
                         </Subscribe>
                         <SocialSite>
-                            <a href="https://www.facebook.com/legex.in" target="_blank"><SocialImg src={facebook} alt="facebook" /></a>
-                            <a href="https://www.instagram.com/legex.in/" target="_blank"><SocialImg src={instagram} alt="instagram" /></a>
-                            <a href="https://www.linkedin.com/company/legex-india/" target="_blank"><SocialImg src={linkedin} alt="linkedin" /></a>
-                            <a href="https://medium.com/legex" target="_blank"><SocialImg src={medium} alt="medium" /></a>
+                            <a rel="noopener noreferrer" href="https://www.facebook.com/legex.in" target="_blank"><SocialImg src={facebook} alt="facebook" /></a>
+                            <a rel="noopener noreferrer" href="https://www.instagram.com/legex.in/" target="_blank"><SocialImg src={instagram} alt="instagram" /></a>
+                            <a rel="noopener noreferrer" href="https://www.linkedin.com/company/legex-india/" target="_blank"><SocialImg src={linkedin} alt="linkedin" /></a>
+                            <a rel="noopener noreferrer" href="https://medium.com/legex" target="_blank"><SocialImg src={medium} alt="medium" /></a>
                         </SocialSite>
                         <p style={{color: '#bdbdbd'}}>&copy; Legexhub Technology Pvt Ltd.</p>
                     </LeftFooterContent>

@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import {indigo} from '@material-ui/core/colors';
+import {indigo, green} from '@material-ui/core/colors';
 import { BrowserRouter } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
 import { Provider } from 'react-redux';
@@ -20,6 +20,7 @@ const theme = createMuiTheme({
   palette: {
     type: 'light',
     primary: indigo,
+    secondary: green,
     background: {
       default: '#f7f7f7',
     },

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Switch, Route, Link, useLocation, Redirect } from 'react-router-dom';
 

@@ -20,7 +20,7 @@ const StatusHanlder = ({ success, message, error, errors }) => {
           preventDuplicate: true,
         })
       );
-  }, [success, message, error, errors]);
+  }, [success, enqueueSnackbar, message, error, errors]);
 
   return <Fragment />;
 };

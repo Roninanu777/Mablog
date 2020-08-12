@@ -24,7 +24,7 @@ const Registeration = ({ user }) => {
 
   useEffect(() => {
     if (user) history.replace('/');
-  }, [user]);
+  }, [user, history]);
 
   const classes = useStyles();
   return (

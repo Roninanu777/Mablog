@@ -54,7 +54,7 @@ const BlogForm = ({ onAddBlog, onEditBlog }) => {
         .catch((e) => {
           history.replace('/');
         });
-  }, []);
+  }, [history, isEditMode, slug]);
 
   const handleTitleChange = (e) => {
     const title = e.target.value;
